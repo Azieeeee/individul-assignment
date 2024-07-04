@@ -1,0 +1,237 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #572d2d88;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.container h2 {
+    margin-top: 0; /* Remove default margin */
+}
+.container p {
+    margin-bottom: 15px; /* Adjust spacing between paragraphs */
+}
+.container ul {
+    margin-top: 0; /* Remove default margin for UL */
+    padding-left: 20px; /* Indent list items */
+}
+/*for text */
+h1 {
+    color: black;
+    font-size: 500%;
+    font-style: oblique;
+    font-family: verdana;
+}
+
+h2, h3 {
+    color:#2f4f4f
+}
+
+footer {
+    color: black;
+    text-align: left;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: smaller;
+}
+/*for side menu*/
+
+.side-menu {
+    width: 250px;
+    Background-color: #676d6d5c;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+.side-menu h2 {
+    color: white;
+}
+.side-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #8c3b45;
+    border-radius: 5px;
+}
+.side-menu a:hover {
+    background-color: #100103;
+}
+.side-menu .dropdown-btn {
+    background-color: #8c3b45;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border-radius: 5px;
+}
+.side-menu .dropdown-btn:hover {
+    background-color: #150103;
+}
+.side-menu .dropdown-container {
+    display: none;
+    padding-left: 10px;
+}
+.side-menu .dropdown-container a {
+    padding: 10px;
+    background-color: #8c3b45;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+.side-menu .dropdown-container a:hover {
+    background-color: #120203;
+}
+.content {
+    margin-left: 20px;
+    padding: 20px;
+    flex: 1;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.intro {
+    display: flex;
+    align-items: flex-start;
+}
+.intro img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.intro div {
+    max-width: 600px;
+}
+.menu-icon {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    z-index: 1000;
+}
+.menu-icon img {
+    width: 30px;
+    height: 30px;
+}
+.side-menu.open {
+    transform: translateX(0);
+}
+/*FOR EDUCATION PAGES*/
+.education-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.education-item img {
+    max-width: 150px;
+    margin-right: 40px;
+}
+.education-item div {
+    flex: 1;
+}
+.education-item h3 {
+    margin-top: 0;
+}
+.containerEDU {
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.containerABOUT {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+/*FOR EXPERIENCE*/
+.containerJOB {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.job {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.job img {
+    max-width: 150px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.job div {
+    flex: 1;
+}
+.job h3 {
+    margin-top: 0;
+}
+ul {
+    padding-left: 20px;
+}
+/*FOR CONTACT*/
+.containerCONTACT {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+}
+.contact-info li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 48%; /* Two contacts per line */
+    box-sizing: border-box;
+}
+.contact-info img {
+    width: 90px;
+    height: 90px;
+    margin-right: 50px;
+}
+.contact-info a {
+    text-decoration: none;
+    color: #333;
+}
+.contact-info a:hover {
+    text-decoration: underline;
+}

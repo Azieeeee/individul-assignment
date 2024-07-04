@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - MY RESUME</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <img src="images/menu-icon.jpg" alt="menu-icon">
+    </div>
+    <div class="side-menu" id="sideMenu">
+        <h2>Menu</h2>
+        <a href="index.html">Home</a>
+        <button class="dropdown-btn">About Me</button>
+        <div class="dropdown-container">
+            <a href="about.html">About</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact Me</a>
+        </div>
+    </div>
+    <header>
+        <h1>EDUCATION</h1>
+    </header>
+    
+    <div class="content">
+        <div class="containerEDU">
+            <div class="education-item">
+                <img src="images/uitm.webp" alt="Education Image 1">
+                <div>
+                    <h3>Bachelor of Information Science in Information Management</h3>
+                    <p><strong>University Teknologi Mara (UiTM)</strong>, Machang, Kelantan</p>
+                    <p>September 2023 - June 2026</p>
+                    <p>Relevant Coursework: Web Development, UI/UX Design, Graphic Design, Database Management</p>
+                    <p>Honors: Magna Cum Laude, Dean's List (2016-2019)</p>
+                </div>
+            </div>
+            <div class="education-item">
+                <img src="images/matrik.png" alt="Education Image 2">
+                <div>
+                    <h3>Certification Program in Science Physical</h3>
+                    <p><strong>Kolej Matrikulasi Kedah (KMK), Changlun, Kedah</strong></p>
+                    <p>Completed: May 2023</p>
+                </div>
+            </div>
+            <div class="education-item">
+                <img src="images/smkg.jpeg" alt="Education Image 2">
+                <div>
+                    <h3>Sijil Pelajaran Malaysia (SPM)</h3>
+                    <p><strong>Sekolah Menengah Kebangsaan Gurun (SMKG), Gurun Kedah</strong></p>
+                    <p>Completed: February 2020</p>
+                    <p>SPM result: 3A 5B 1C</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+
+        function toggleMenu() {
+            var sideMenu = document.getElementById("sideMenu");
+            sideMenu.classList.toggle("open");
+        }
+    </script>
+    <footer>
+        <p>&copy; 2024 Web Designer. All rights reserved.</p>
+    </footer>
+</body>
+</html>

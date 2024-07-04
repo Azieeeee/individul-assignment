@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - MY RESUME</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .side-menu {
+            width: 250px;
+            Background-color: #676d6d5c;
+            color: white;
+            padding: 20px;
+            box-sizing: border-box;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease-in-out;
+        }
+        .side-menu h2 {
+            color: white;
+        }
+        .side-menu a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #8c3b45;
+            border-radius: 5px;
+        }
+        .side-menu a:hover {
+            background-color: #100103;
+        }
+        .side-menu .dropdown-btn {
+            background-color: #8c3b45;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            text-align: left;
+            border-radius: 5px;
+        }
+        .side-menu .dropdown-btn:hover {
+            background-color: #150103;
+        }
+        .side-menu .dropdown-container {
+            display: none;
+            padding-left: 10px;
+        }
+        .side-menu .dropdown-container a {
+            padding: 10px;
+            background-color: #8c3b45;
+            border-radius: 5px;
+            margin: 5px 0;
+        }
+        .side-menu .dropdown-container a:hover {
+            background-color: #120203;
+        }
+        .content {
+            margin-left: 20px;
+            padding: 20px;
+            flex: 1;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .intro {
+            display: flex;
+            align-items: flex-start;
+        }
+        .intro img {
+            width: 200px;
+            height: auto;
+            margin-right: 20px;
+            border-radius: 10px;
+        }
+        .intro div {
+            max-width: 600px;
+        }
+        .menu-icon {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .menu-icon img {
+            width: 30px;
+            height: 30px;
+        }
+        .side-menu.open {
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <img src="images/menu-icon.jpg" alt="menu-icon">
+    </div>
+    <div class="side-menu" id="sideMenu">
+        <h2>Menu</h2>
+        <a href="index.html">Home</a>
+        <button class="dropdown-btn">About Me</button>
+        <div class="dropdown-container">
+            <a href="about.html">About</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact Me</a>
+        </div>
+    </div>
+    <header>
+        <h1>MY RESUME</h1>
+    </header>
+    <div class="content">
+        <div class="container">
+            <div class="intro">
+                <img src="images/GAMBAR.jpg" alt="Profile Picture">
+                <div>
+                    <h2>Welcome</h2>
+                    <p>Hello! I'm Nur Azieyana, a professional web designer with a passion for creating beautiful and functional websites. With over 5 years of experience, I specialize in HTML, CSS, and JavaScript to build responsive and user-friendly designs.</p>
+                    <p>Explore my portfolio to see examples of my work, learn more about my background, or get in touch to discuss how I can help with your next project.</p>
+                    <p><strong>Key Skills:</strong></p>
+                    <ul>
+                        <li>Web Design</li>
+                        <li>UI/UX Design</li>
+                        <li>Responsive Design</li>
+                        <li>Graphic Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+
+        function toggleMenu() {
+            var sideMenu = document.getElementById("sideMenu");
+            sideMenu.classList.toggle("open");
+        }
+    </script>
+    <footer>
+        <p>&copy; 2024 Web Designer. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+

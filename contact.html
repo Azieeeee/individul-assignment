@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me - MY RESUME</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <img src="images/menu-icon.jpg" alt="menu-icon">
+    </div>
+    <div class="side-menu" id="sideMenu">
+        <h2>Menu</h2>
+        <a href="index.html">Home</a>
+        <button class="dropdown-btn">About Me</button>
+        <div class="dropdown-container">
+            <a href="about.html">About</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact Me</a>
+        </div>
+    </div>
+    <header>
+        <h1>CONTACT ME</h1>
+    </header>
+    
+    <div class="containerCONTACT">
+        <div class="contact-info">
+            <ul>
+                <li>
+                    <img src="images/email.png" alt="Email Icon">
+                    <div>
+                        <strong>Email:</strong><br>
+                        <a href="mailto:2023663686@student.uitm.edu.my">2023663686@student.uitm.edu.my</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/linkedIn.png" alt="LinkedIn Icon">
+                    <div>
+                        <strong>LinkedIn:</strong><br>
+                        <a href="https://www.linkedin.com/in/azieyana">linkedin.com/in/azieyana</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/X.jpg" alt="Twitter Icon">
+                    <div>
+                        <strong>X:</strong><br>
+                        <a href="https://twitter.com/azieyana">@azieyana</a>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/wasap.jpg" alt="WhatsApp Icon">
+                    <div>
+                        <strong>WhatsApp:</strong><br>
+                        <a href="https://wa.me/0199778789">Chat on WhatsApp</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+
+        function toggleMenu() {
+            var sideMenu = document.getElementById("sideMenu");
+            sideMenu.classList.toggle("open");
+        }
+    </script>
+    <footer>
+        <p>&copy; 2024 Web Designer. All rights reserved.</p>
+    </footer>
+</body>
+</html>

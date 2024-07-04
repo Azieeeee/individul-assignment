@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - MY RESUME</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <img src="images/menu-icon.jpg" alt="menu-icon">
+    </div>
+    <div class="side-menu" id="sideMenu">
+        <h2>Menu</h2>
+        <a href="index.html">Home</a>
+        <button class="dropdown-btn">About Me</button>
+        <div class="dropdown-container">
+            <a href="about.html">About</a>
+            <a href="education.html">Education</a>
+            <a href="experience.html">Experience</a>
+            <a href="contact.html">Contact Me</a>
+        </div>
+    </div>
+    <header>
+        <h1>EXPERIENCE</h1>
+    </header>
+    
+    <div class="content">
+        <h2>Professional Experience</h2>
+        <div class="containerJOB">
+            <div class="job">
+                <img src="images/1.png" alt="Senior Web Designer Image">
+                <div>
+                    <h3>Senior Web Designer</h3>
+                    <p><strong>Company:</strong> LCLC Web Solutions</p>
+                    <p><strong>Location:</strong> Gombak, Selangor</p>
+                    <p><strong>Duration:</strong> June 2020 - Present</p>
+                    <ul>
+                        <li>Lead the design and development of over 50 client websites, improving user engagement and conversion rates.</li>
+                        <li>Collaborate with cross-functional teams to define and implement innovative solutions for the product direction, visuals, and experience.</li>
+                        <li>Manage and mentor a team of junior designers, fostering a collaborative and creative work environment.</li>
+                        <li>Conduct user research and usability testing to ensure designs meet user needs and business goals.</li>
+                        <li>Optimize websites for performance and accessibility, resulting in a 20% increase in page load speed.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="job">
+                <img src="images/2.png" alt="Web Designer Image">
+                <div>
+                    <h3>Web Designer</h3>
+                    <p><strong>Company:</strong> MEL Creative Agency</p>
+                    <p><strong>Location:</strong> Batu Pahat, Johor</p>
+                    <p><strong>Duration:</strong> January 2017 - May 2020</p>
+                    <ul>
+                        <li>Designed and developed responsive websites for a variety of clients, ensuring compatibility across different devices and browsers.</li>
+                        <li>Worked closely with clients to gather requirements and provide design solutions that align with their brand identity.</li>
+                        <li>Implemented SEO best practices to enhance website visibility and search engine rankings.</li>
+                        <li>Created wireframes, prototypes, and high-fidelity mockups to effectively communicate design concepts.</li>
+                        <li>Participated in client presentations and design reviews, receiving positive feedback for creativity and attention to detail.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="job">
+                <img src="images/3.png" alt="Junior Web Designer Image">
+                <div>
+                    <h3>Junior Web Designer</h3>
+                    <p><strong>Company:</strong> Web StartPop Inc.</p>
+                    <p><strong>Location:</strong> Kota Tinggi, Johor</p>
+                    <p><strong>Duration:</strong> June 2015 - December 2016</p>
+                    <ul>
+                        <li>Assisted in the design and development of websites for small businesses and startups.</li>
+                        <li>Maintained and updated existing websites, ensuring they remained current and functional.</li>
+                        <li>Collaborated with senior designers to learn best practices and improve design skills.</li>
+                        <li>Developed graphics and multimedia content for websites, enhancing visual appeal and user experience.</li>
+                        <li>Provided technical support to clients, resolving website issues in a timely manner.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+        var i;
+
+        for (i = 0; i < dropdown.length; i++) {
+            dropdown[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+
+        function toggleMenu() {
+            var sideMenu = document.getElementById("sideMenu");
+            sideMenu.classList.toggle("open");
+        }
+    </script>
+    <footer>
+        <p>&copy; 2024 Web Designer. All rights reserved.</p>
+    </footer>
+</body>
+</html>
